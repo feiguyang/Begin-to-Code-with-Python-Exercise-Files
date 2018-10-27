@@ -1,1 +1,18 @@
 This file is created to see how can we check if our local git repository is up to date and in sync with remote repo.
+
+
+Steps to check local repository sync status with remote repository:
+
+Run 'use git remote update' -> This command get the updated details of your remote refs.
+
+Once you get the latest updates from remote repository, we can use below commands to do several things:
+
+1] git status -uno:
+will tell you whether the branch you are tracking is ahead, behind or has diverged.
+If it says nothing, the local and remote are the same.
+
+2] git show-branch *master :
+will show you the commits in all of the branches whose names end in 'master' (eg master and origin/master).
+
+If you use -v with git remote update (git remote -v update) you can see which branches got updated,
+so you don't really need any further commands.
